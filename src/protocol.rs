@@ -91,7 +91,7 @@ impl PingableServer {
 			.read_to_end(&mut output)
 			.await?;
 
-		Ok(String::from_utf8_lossy_owned(output))
+		Ok(String::from_utf8_lossy(&output).into_owned())
 	}
 
 	// TODO
