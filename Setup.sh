@@ -26,28 +26,6 @@ rustc --version
 cargo --version
 
 clear
-echo "------------------------------------------------------------"
-echo "Step 3: Cleaning previous build artifacts..."
-echo "------------------------------------------------------------"
-
-cargo clean
-sleep 1
-
-clear
-echo "------------------------------------------------------------"
-echo "Step 4: Compiling ServerSeekerV2 (release mode)..."
-echo "------------------------------------------------------------"
-
-cargo build --release
-
-if [ $? -ne 0 ]; then
-    echo "------------------------------------------------------------"
-    echo "Build failed! Check the errors above and rerun Setup.sh"
-    echo "------------------------------------------------------------"
-    exit 1
-fi
-
-clear
 sleep 1
 echo "------------------------------------------------------------"
 echo "ServerSeekerV2 dependencies installed successfully!"
