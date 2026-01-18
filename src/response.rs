@@ -133,27 +133,27 @@ impl Server {
 				for (key, value) in object {
 					match key.as_str() {
 						"obfuscated" => {
-							if let Some(b) = value.as_bool() && b {
+							if matches!(value.as_bool(), Some(true)) {
 								output.push_str("§k")
 							}
 						},
 						"bold" => {
-							if let Some(b) = value.as_bool() && b {
+							if matches!(value.as_bool(), Some(true)) {
 								output.push_str("§l")
 							}
 						},
 						"strikethrough" => {
-							if let Some(b) = value.as_bool() && b {
+							if matches!(value.as_bool(), Some(true)) {
 								output.push_str("§m")
 							}
 						},
 						"underline" => {
-							if let Some(b) = value.as_bool() && b {
+							if matches!(value.as_bool(), Some(true)) {
 								output.push_str("§n")
 							}
 						},
 						"italic" => {
-							if let Some(b) = value.as_bool() && b {
+							if matches!(value.as_bool(), Some(true)) {
 								output.push_str("§o")
 							}
 						},
